@@ -8,7 +8,7 @@ def index(request):
     context = {
         "hello_message": "Hello Moringa"
     }
-    return render(request, 'index.html' ,{})
+    return render(request, 'index.html' ,context)
 
 
 
