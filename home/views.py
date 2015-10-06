@@ -7,7 +7,7 @@ def index(request):
     print(request.POST  )
     form = StudentForm(request.POST or None)
 
-     context = {
+    context = {
         "hello_message": "Register new student",
         "form": form
     }
@@ -15,7 +15,7 @@ def index(request):
     if form.is_valid():
         form.save()
 
-     context = {
+        context = {
         "hello_message": "Student Saved",
         "form": form
     }
