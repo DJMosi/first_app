@@ -13,8 +13,13 @@ def index(request):
     }
 
     if form.is_valid():
-        form.save()
 
+        instance = form.save(commit=false)
+        full_name = form.instance.cleaned_data.get('full_name')
+        if full_name == "Jacob":
+            full_name = "Developer"
+        instance.full_name = full_name
+        instance.save()
         context = {
         "hello_message": "Student Saved",
 
