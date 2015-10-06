@@ -4,7 +4,7 @@
     <p>{{hello_message}}</p>
 
     <form action="" method="post" accept-charset="utf8">
-
+        {{csrf_token}}
         {{form.as_p}}
 
     <p><input type="submit" value="Register"></p>
