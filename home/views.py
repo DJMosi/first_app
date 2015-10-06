@@ -19,7 +19,7 @@ def index(request):
         "hello_message": "Student Saved",
         "form": form
     }
-    return render(request, 'i ndex.html', context)
+    return render(request, 'index.html', context)
 
 
 
