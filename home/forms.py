@@ -4,7 +4,7 @@ from .models import Student
 
 class StudentForm(forms.ModelForm):
     class Meta:
-        fields = ['full_name', 'email', 'age', 'interests']
+        fields = ['full_name', 'age', 'email', 'interests']
         model = Student
     def clean_age(self):
         age = self.cleaned_data.get('age')
