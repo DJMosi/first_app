@@ -14,7 +14,7 @@ def index(request):
 
     if form.is_valid():
 
-        instance = form.save(commit=false)
+        instance = form.save(commit=False)
         full_name = form.instance.cleaned_data.get('full_name')
         if full_name == "Jacob":
             full_name = "Developer"
