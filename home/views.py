@@ -5,7 +5,7 @@ from .forms import StudentForm
 
 
 def index(request):
-    print (Request.POST)
+    print(request.Post)
     form = StudentForm()
     context = {
         "hello_message": "Hello Moringa",
