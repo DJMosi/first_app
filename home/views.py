@@ -6,13 +6,20 @@ from .forms import StudentForm
 def index(request):
     print(request.POST  )
     form = StudentForm(request.POST or None)
-    if form.is_valid():
-        form.save()
-    context = {
-        "hello_message": "Hello Moringa",
+
+     context = {
+        "hello_message": "Register new student",
         "form": form
     }
-    return render(request, 'index.html', context)
+
+    if form.is_valid():
+        form.save()
+
+     context = {
+        "hello_message": "Student Saved",
+        "form": form
+    }
+    return render(request, 'i ndex.html', context)
 
 
 
