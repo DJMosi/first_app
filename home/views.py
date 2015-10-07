@@ -1,7 +1,8 @@
 from django.shortcuts import render
 #from django.http import HttpResponse
-from .forms import StudentForm
+from .forms import StudentForm, FeedbackForm
 # Create your views here.
+#from .forms import FeedbackForm
 
 def index(request):
     print(request.POST  )
