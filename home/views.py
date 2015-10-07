@@ -27,5 +27,11 @@ def index(request):
     }
     return render(request, 'index.html', context)
 
+def feedback(request):
+    from = FeedbackForm()
+    conext = {
+        "form": form
+    }
+    return render(request, 'feedback.html', context)
 
 
