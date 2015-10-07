@@ -1,10 +1,9 @@
 from django.shortcuts import render
-from .forms import StudentForm, FeedbackForm
-#from .forms import FeedbackForm
+from .forms import StudentForm
+from .forms import FeedbackForm
 # Create your views here.
 
 def index(request):
-    print(request.POST)
     form = StudentForm(request.POST or None)
 
     context = {
@@ -28,8 +27,10 @@ def index(request):
 
 
 def feedback(request):
-
-    form = FeedbackForm()
+    form = FeedbackForm(request.POST or None)
+    if form.is_valid():
+        for key, value in form.cleaned_data.items():
+            print(key, value)
     context = {
         "form": form
     }
