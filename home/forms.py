@@ -22,5 +22,10 @@ class FeedbackForm(forms.Form):
     email = forms.EmailField()
     message = forms.CharField()
 
+    def clean_message(self):
+        message = self.cleaned_data.get('message')
+        if message == 'Dirty'
+        message == 'clean'
+        return message
 
 
