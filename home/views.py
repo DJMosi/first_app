@@ -1,11 +1,10 @@
 from django.shortcuts import render
-#from django.http import HttpResponse
 from .forms import StudentForm, FeedbackForm
-# Create your views here.
 #from .forms import FeedbackForm
+# Create your views here.
 
 def index(request):
-    print(request.POST  )
+    print(request.POST)
     form = StudentForm(request.POST or None)
 
     context = {
@@ -27,11 +26,14 @@ def index(request):
     }
     return render(request, 'index.html', context)
 
+
 def feedback(request):
-    from = FeedbackForm()
-    conext = {
+
+    form = FeedbackForm()
+    context = {
         "form": form
     }
     return render(request, 'feedback.html', context)
+
 
 
