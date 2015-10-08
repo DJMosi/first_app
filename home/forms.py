@@ -24,8 +24,9 @@ class FeedbackForm(forms.Form):
 
     def clean_message(self):
         message = self.cleaned_data.get('message')
-        if message == 'Dirty'
-        message == 'clean'
+        if message == 'Dirty':
+            message == 'clean'
+        print(message)
         return message
 
 
