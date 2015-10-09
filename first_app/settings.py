@@ -27,6 +27,13 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
 
+EMAIL_HOST = 'smtp.mandrillapp.com'
+EMAIL_HOST_USER = 'davimosi@gmail.com'
+EMAIL_HOST_PASSWORD = '6z6uuuaDpJ3IyOhKfJmAvQ'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+
 # Application definition
 
 INSTALLED_APPS = (
@@ -82,3 +89,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = ' os.path.join(BASE_DIR, ("static_prod")'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+
