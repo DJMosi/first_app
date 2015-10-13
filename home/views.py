@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .forms import StudentForm
 from .forms import FeedbackForm
+from .models import students
 # Create your views here.
 
 def index(request):
