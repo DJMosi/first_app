@@ -5,11 +5,11 @@ from django.conf.urls.static import static
 # admin.autodiscover()
 
 
-urlpatterns = patterns[
+urlpatterns = patterns [
 	url(r'^$', 'home.views.index', name='home'),
 	url(r'^feedback/$', 'home.views.feedback', name='feedback'),
 	url(r'^students/$', 'home.views.students', name='students'),
-	url(r'^admin/', include(admin.site.urls)),
+	url(r'^admin/$', include(admin.site.urls)),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
