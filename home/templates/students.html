@@ -37,7 +37,7 @@
 		<td> {{student.age}} </td>
 		<td> {{student.email}} </td>
 		<td> {{student.interests}} </td>
-		<td> {{student.Last updated}} </td>
+		<td> {{student.Last updated | timesince}} </td> <!--time since 			is a filter tell us when a record was last updated-->
 	</tr>
 
 	{% endfor %}
