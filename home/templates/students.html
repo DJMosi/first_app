@@ -22,15 +22,12 @@
 <body>
 
 <table class="table">
-
-	<tr><th>Full name</th>
-
+	<tr>
+	<th>Full name</th>
 	<th>Age</th>
-
 	<th>Email</th>
-
 	<th>Interests</th>
-
+	<th>Last updated</th>
 	</tr>
 
 	{% for student in students %}
@@ -40,6 +37,7 @@
 		<td> {{student.age}} </td>
 		<td> {{student.email}} </td>
 		<td> {{student.interests}} </td>
+		<td> {{student.Last updated}} </td>
 	</tr>
 
 	{% endfor %}
